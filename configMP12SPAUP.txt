@@ -1,0 +1,14 @@
+Begin paup;
+	execute 12S.nex;
+	outgroup Ochotona_hyperborea;
+	set criterion=parsimony;
+	hsearch addseq=random nrep=100 swap=tbr;
+	weight 2:1;
+	bootstrap nreps=10000 bseed=3 conlevel=50 grpfreq=yes keepall=yes
+	brlens=yes treefile=bootstrap_MP12S.tre replace=yes format=NEXUS
+	search=heuristic;
+	savetrees from=1 to=1 file=bootstrap_MP12S.tre replace=yes format=altnex
+	savebootp=nodelabels;
+	Showtree;
+	quit;
+end;

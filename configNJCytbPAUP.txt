@@ -1,0 +1,15 @@
+Begin paup;
+	execute Cytb.nex;
+	outgroup Ochotona_hyperborea;
+	set criterion = distance;
+	dset dist=k2p;
+	hsearch addseq=random nrep=100 swap=tbr;
+	nj;
+	bootstrap nreps=10000 bseed=3 conlevel=50 grpfreq=yes keepall=yes
+	brlens=yes treefile=bootstrap_NJCytb.tre replace=yes format=NEXUS
+	search=N;
+	savetrees from=1 to=1 file=bootstrap_NJCytb.tre replace=yes format=altnex
+	savebootp=nodelabels;
+	Showtree;
+	quit;
+end;
