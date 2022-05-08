@@ -1,4 +1,5 @@
 Como usar:
+
 .:1º Executar o comando "bash PAKAGES.sh" 
 	O Programa "PAKAGES.sh" vai instalar todas as dependências necessárias para executar o main script
 
